@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ServiceCoreWSService" targetNamespace="http://model.imagimatica.org/" xmlns:tns="http://model.imagimatica.org/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service"
+ >
+    <message name="process"/>
+    <message name="processResponse"/>
+    <message name="getRaffles"/>
+    <message name="getRafflesResponse"/>
+    <message name="getUser"/>
+    <message name="getUserResponse"/>
+    <message name="getConfig"/>
+    <message name="getConfigResponse"/>
+    <message name="updateRaffle"/>
+    <message name="updateRaffleResponse"/>
+    <message name="getDataToUpdateGUI"/>
+    <message name="getDataToUpdateGUIResponse"/>
+    <message name="getMonthlyWinners"/>
+    <message name="getMonthlyWinnersResponse"/>
+    <message name="getEmpresa"/>
+    <message name="getEmpresaResponse"/>
+    <message name="getRafflesByDates"/>
+    <message name="getRafflesByDatesResponse"/>
+    <message name="setPaymentDate"/>
+    <message name="setPaymentDateResponse"/>
+    <message name="getWinnerInRaffle"/>
+    <message name="getWinnerInRaffleResponse"/>
+    <message name="setCustomersDB"/>
+    <message name="setCustomersDBResponse"/>
+    <message name="updateRaffleTimes"/>
+    <message name="updateRaffleTimesResponse"/>
+    <portType name="ServiceCoreWS">
+        <operation name="process">
+            <input message="tns:process"/>
+            <output message="tns:processResponse"/>
+        </operation>
+        <operation name="getRaffles">
+            <input message="tns:getRaffles"/>
+            <output message="tns:getRafflesResponse"/>
+        </operation>
+        <operation name="getUser">
+            <input message="tns:getUser"/>
+            <output message="tns:getUserResponse"/>
+        </operation>
+        <operation name="getConfig">
+            <input message="tns:getConfig"/>
+            <output message="tns:getConfigResponse"/>
+        </operation>
+        <operation name="updateRaffle">
+            <input message="tns:updateRaffle"/>
+            <output message="tns:updateRaffleResponse"/>
+        </operation>
+        <operation name="getDataToUpdateGUI">
+            <input message="tns:getDataToUpdateGUI"/>
+            <output message="tns:getDataToUpdateGUIResponse"/>
+        </operation>
+        <operation name="getMonthlyWinners">
+            <input message="tns:getMonthlyWinners"/>
+            <output message="tns:getMonthlyWinnersResponse"/>
+        </operation>
+        <operation name="getEmpresa">
+            <input message="tns:getEmpresa"/>
+            <output message="tns:getEmpresaResponse"/>
+        </operation>
+        <operation name="getRafflesByDates">
+            <input message="tns:getRafflesByDates"/>
+            <output message="tns:getRafflesByDatesResponse"/>
+        </operation>
+        <operation name="setPaymentDate">
+            <input message="tns:setPaymentDate"/>
+            <output message="tns:setPaymentDateResponse"/>
+        </operation>
+        <operation name="getWinnerInRaffle">
+            <input message="tns:getWinnerInRaffle"/>
+            <output message="tns:getWinnerInRaffleResponse"/>
+        </operation>
+        <operation name="setCustomersDB">
+            <input message="tns:setCustomersDB"/>
+            <output message="tns:setCustomersDBResponse"/>
+        </operation>
+        <operation name="updateRaffleTimes">
+            <input message="tns:updateRaffleTimes"/>
+            <output message="tns:updateRaffleTimesResponse"/>
+        </operation>
+    </portType>
+    <binding name="ServiceCoreWSPortBinding" type="tns:ServiceCoreWS">
+        <wsp:PolicyReference URI="#ServiceCoreWSPortBindingPolicy"/>
+        <operation name="process">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getRaffles">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getUser">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getConfig">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateRaffle">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getDataToUpdateGUI">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getMonthlyWinners">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getEmpresa">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getRafflesByDates">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="setPaymentDate">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getWinnerInRaffle">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="setCustomersDB">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateRaffleTimes">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="ServiceCoreWSService">
+        <port name="ServiceCoreWSPort" binding="tns:ServiceCoreWSPortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="ServiceCoreWSPortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

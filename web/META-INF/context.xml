@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/WSCore">
+    <Resource auth="Container" 
+              driverClassName="net.sourceforge.jtds.jdbc.Driver" 
+              maxActive="100" 
+              maxIdle="30" 
+              maxWait="10000" 
+              name="jdbc/SQLServerProcDoc" 
+              password="Puebla22" 
+              type="javax.sql.DataSource" 
+              url="jdbc:jtds:sqlserver://localhost:1433/EassyRaffle"
+              username="sa"
+              autoReconnect="true" 
+              removeAbandoned="true"  
+              logAbandoned="true" 
+              removeAbandonedTimeout="60"
+              validationQuery = "select 1"/>
+</Context>
